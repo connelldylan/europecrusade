@@ -684,7 +684,7 @@ header .navbar-default .navbar-nav li a {
 
 .navigation {
   position: fixed;
-  background: #000080;
+  background: #04531e;
   padding: 20px 0;
   top: 0;
   width: 100%;
@@ -3153,22 +3153,53 @@ ul.dropdown-menu li {
   }
 }
 
+/* Increase size of Instagram and Facebook icons in the navigation bar */
+.navbar-nav .nav-item .btn-instagram .fab,
+.navbar-nav .nav-item .btn-facebook .fab {
+    font-size: 28px;
+}
+
 button {
-  padding: 0.8em 1.8em;
-  border: 2px solid #17C3B2;
+  padding: 0.8em 0.6em;
+  border: 2px solid #0a4b97;
   position: relative;
   overflow: hidden;
   background-color: transparent;
-  text-align: center;
   text-transform: uppercase;
   font-size: 16px;
   transition: .3s;
   z-index: 1;
   font-family: inherit;
-  color: #17C3B2;
- }
- 
- button::before {
+  color: #0a4b97;
+  display: inline-block; /* Ensure button is treated as a block-level inline element */
+  width: auto;
+  height: 4.5rem;
+  cursor: pointer; /* Ensures it's clear the element is clickable */
+  border-radius: 20px;
+}
+
+.button a {
+  color: #fff;
+  text-decoration: none;
+  display: flex; /* Make the <a> a flex container */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  height: 100%; /* Ensure <a> covers the full height of the button */
+  width: 100%; /* Ensure <a> covers the full width of the button */
+}
+
+.navbar-nav .button {
+  margin-right: 10px; /* Adds spacing between the buttons */
+  text-align: center; /* Ensures text within the buttons is centered */
+}
+
+/* If your buttons are wrapping <a> elements, you might want to ensure these are also centered */
+.navbar-nav .button a {
+  display: block; /* Makes the <a> element fill the button */
+  text-align: center; /* Center the text */
+}
+
+button::before {
   content: '';
   width: 0;
   height: 300%;
@@ -3176,16 +3207,16 @@ button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(45deg);
-  background: #17C3B2;
+  background: #0a4b97;
   transition: .5s ease;
   display: block;
   z-index: -1;
- }
- 
- button:hover::before {
+}
+
+button:hover::before {
   width: 105%;
- }
- 
- button:hover {
+}
+
+button:hover a {
   color: #111;
- }
+}
