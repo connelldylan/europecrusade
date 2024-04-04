@@ -866,25 +866,25 @@ ul.dropdown-menu li {
   }
 }
 .slider {
-  background: url("../images/Kids_In_Gi.jpg") no-repeat;
+  background: url("../images/homes.jpg") no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  background-position: center center; /* Default background position */
-  padding: 20vh 0;
+  background-position: center -19vh; /* Default background position */
+  padding: 25vh 0;
   position: relative;
 }
 
 /* Reduced padding and changed background position and size for viewports up to 992px wide */
 @media (max-width: 992px) {
   .slider {
-    padding: 15vh 0;
+    padding: 12.5vh 0;
   }
 }
 
 /* Further changes for viewports up to 768px wide */
 @media (max-width: 768px) {
   .slider {
-    padding: 15vh 0;
+    padding: 12.5vh 0;
     background-attachment: scroll; /* Disable fixed background for iOS */
     background-size: auto 80%;
     background-position: 15% 150%;
@@ -3009,7 +3009,7 @@ ul.dropdown-menu li {
 }
 
 .footer {
-  background: #F5F5F5;
+  background: #a8a8a8;
   text-align: center;
   padding: 80px 0;
 }
@@ -3019,7 +3019,7 @@ ul.dropdown-menu li {
   color: #919191;
 }
 .footer a {
-  color: #595959;
+  color: #0a4b97;
 }
 .footer .footer-manu {
   padding-bottom: 25px;
@@ -3041,6 +3041,19 @@ ul.dropdown-menu li {
 }
 .footer .copyright a {
   font-weight: 600;
+}
+
+.footer-img-container {
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+  height: 100px; /* Set a fixed height for the container */
+  margin-bottom: 20px; /* Add some space below the container */
+}
+
+.footer-img {
+  max-height: 100%; /* Ensure the image fits within the container's height */
+  max-width: 100%; /* Ensure the image fits within the container's width */
 }
 
 .scroll-to-top {
@@ -3171,25 +3184,27 @@ button {
   z-index: 1;
   font-family: inherit;
   color: #0a4b97;
-  display: inline-block; /* Ensure button is treated as a block-level inline element */
-  width: auto;
-  height: 4.5rem;
+  display: inline-flex; /* Changed to inline-flex to use flexbox properties */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  width: auto; /* Set a specific width */
+  height: 3.4rem; /* Set a specific height */
   cursor: pointer; /* Ensures it's clear the element is clickable */
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 .button a {
   color: #fff;
   text-decoration: none;
+  width: 100%; /* Ensure <a> covers the full width of the button */
+  height: 100%; /* Ensure <a> covers the full height of the button */
   display: flex; /* Make the <a> a flex container */
   justify-content: center; /* Center content horizontally */
   align-items: center; /* Center content vertically */
-  height: 100%; /* Ensure <a> covers the full height of the button */
-  width: 100%; /* Ensure <a> covers the full width of the button */
 }
 
-.navbar-nav .button {
-  margin-right: 10px; /* Adds spacing between the buttons */
+.navbar-nav .button{
+  margin: 5px; /* Adds spacing between the buttons */
   text-align: center; /* Ensures text within the buttons is centered */
 }
 
@@ -3212,6 +3227,14 @@ button::before {
   display: block;
   z-index: -1;
 }
+
+@media (min-width: 768px) {
+  /* Enable animation for screens wider than 768px */
+  button::before {
+    width: 0;
+    height: 300%;
+    transition: .5s ease;
+  }
 
 button:hover::before {
   width: 105%;
