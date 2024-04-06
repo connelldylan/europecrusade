@@ -1903,18 +1903,36 @@ ul.dropdown-menu li {
 }
 .about .staff-member {
   margin-bottom: 30px;
+  text-align: center; /* Center-align the content for visual consistency */
 }
+
+.about .staff-member img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border: 4px solid #04531e;
+  width: 300px; /* Specific width for all images */
+  height: 300px; /* Specific height for all images */
+  display: block;
+  margin: 0 auto; /* Center the image */
+  margin-bottom: 0;
+}
+
 .about .staff-info {
-  background-color: #000080;
+  background-color: #04531e;
   padding: 15px;
+  width: 300px; /* Match the width of the images */
+  margin: 0 auto; /* Center the block */
+  color: #ffffff; /* Assuming you want white text color for contrast */
 }
+
 .about .staff-img-border {
-  border: 4px solid #000080;
   display: block;
   width: 100%;
   height: auto;
   margin-bottom: 0;
 }
+
 .about .staff-name {
   font-weight: bold;
   margin-top: 0;
@@ -3034,7 +3052,7 @@ ul.dropdown-menu li {
 }
 .footer .footer-manu ul li a {
   display: inline-block;
-  color: #494949;
+  color: #000000;
 }
 .footer .footer-manu ul li a:hover {
   color: #000;
@@ -3235,7 +3253,7 @@ button::before {
     height: 300%;
     transition: .5s ease;
   }
-
+}
 button:hover::before {
   width: 105%;
 }
