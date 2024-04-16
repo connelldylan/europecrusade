@@ -312,7 +312,7 @@ input[type=tel]:focus {
 }
 .section-title p {
   font-style: italic;
-  color: #666;
+  color: white;
   font-family: "Volkhov", serif;
 }
 
@@ -320,6 +320,7 @@ input[type=tel]:focus {
   font-size: 28px;
   font-weight: 600;
   margin-bottom: 30px;
+  color: white;
 }
 
 .page-title {
@@ -1006,6 +1007,78 @@ ul.dropdown-menu li {
 
 @media (max-width: 992px) {
   .slider2 .block p {
+    font-size: 16px;
+  }
+}
+
+.slider3 {
+  background: url("../images/inside_home_stock2.jpg") no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center -19vh; /* Default background position */
+  padding: 25vh 0;
+  position: relative;
+}
+
+/* Reduced padding and changed background position and size for viewports up to 992px wide */
+@media (max-width: 992px) {
+  .slider3 {
+    padding: 12.5vh 0;
+  }
+}
+
+/* Further changes for viewports up to 768px wide */
+@media (max-width: 768px) {
+  .slider3 {
+    padding: 12.5vh 0;
+    background-attachment: scroll; /* Disable fixed background for iOS */
+    background-size: auto 80%;
+    background-position: 15% 150%;
+  }
+  .about.section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.slider3 .block {
+  color: #E3E3E4;
+  text-align: center;
+}
+
+.slider3 .block h1 {
+  font-weight: 100;
+  font-size: 45px;
+  line-height: 60px;
+  letter-spacing: 10px;
+  padding-bottom: 15px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 992px) {
+  .slider3 .block h1 {
+    font-size: 36px;
+    line-height: 46px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider3 .block h1 {
+    font-size: 32px;
+    line-height: 42px;
+  }
+}
+
+.slider3 .block p {
+  margin-bottom: 10px;
+  color: #b9b9b9;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 300;
+}
+
+@media (max-width: 992px) {
+  .slider3 .block p {
     font-size: 16px;
   }
 }
