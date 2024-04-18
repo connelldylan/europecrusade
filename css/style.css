@@ -310,6 +310,12 @@ input[type=tel]:focus {
   margin-bottom: 20px;
   color:white;
 }
+@media (max-width: 480px) {
+  .section-title h2 {
+    font-size: 26px;
+  }
+}
+
 .section-title p {
   font-style: italic;
   color: white;
@@ -868,17 +874,19 @@ ul.dropdown-menu li {
   }
 }
 .slider {
-  background: url("../images/homes.jpg") no-repeat;
+  background: url("../images/homes2.jpg") no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  background-position: center -19vh; /* Default background position */
-  padding: 25vh 0;
+  background-position: center 0vh;
+  background-size: auto 100%;
+  padding: 20vh 0vh;
   position: relative;
 }
 
 /* Reduced padding and changed background position and size for viewports up to 992px wide */
 @media (max-width: 992px) {
   .slider {
+    background: url("../images/homes.jpg") no-repeat;
     padding: 12.5vh 0;
   }
 }
@@ -886,8 +894,9 @@ ul.dropdown-menu li {
 /* Further changes for viewports up to 768px wide */
 @media (max-width: 768px) {
   .slider {
-    padding: 12.5vh 0;
-    background-attachment: scroll; /* Disable fixed background for iOS */
+    background: url("../images/homes.jpg") no-repeat;
+    padding: 7.5vh 0;
+    background-attachment: scroll;
     background-size: auto 80%;
     background-position: 15% 150%;
   }
@@ -922,6 +931,8 @@ ul.dropdown-menu li {
   .slider .block h1 {
     font-size: 32px;
     line-height: 42px;
+    letter-spacing: 5px;
+    margin-top: 8vh;
   }
 }
 
@@ -960,8 +971,8 @@ ul.dropdown-menu li {
   .slider2 {
     padding: 12.5vh 0;
     background-attachment: scroll; /* Disable fixed background for iOS */
-    background-size: auto 80%;
-    background-position: 15% 150%;
+    background-size: auto 95%;
+    background-position: 50% 500%;
   }
   .about.section {
     padding-top: 30px;
@@ -981,6 +992,7 @@ ul.dropdown-menu li {
   letter-spacing: 10px;
   padding-bottom: 15px;
   text-transform: uppercase;
+  background-color: rgba(255, 255, 255, 0.45);
 }
 
 @media (max-width: 992px) {
@@ -994,6 +1006,9 @@ ul.dropdown-menu li {
   .slider2 .block h1 {
     font-size: 32px;
     line-height: 42px;
+    letter-spacing: 5px;
+    margin-top: 6vh;
+    background-color: rgba(255, 255, 255, 0.8);
   }
 }
 
@@ -1053,6 +1068,7 @@ ul.dropdown-menu li {
   letter-spacing: 10px;
   padding-bottom: 15px;
   text-transform: uppercase;
+  background-color: rgba(255, 255, 255, 0.45);
 }
 
 @media (max-width: 992px) {
@@ -1066,6 +1082,9 @@ ul.dropdown-menu li {
   .slider3 .block h1 {
     font-size: 32px;
     line-height: 42px;
+    letter-spacing: 5px;
+    margin-top: 6vh;
+    background-color: rgba(255, 255, 255, 0.8);
   }
 }
 
