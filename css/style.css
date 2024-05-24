@@ -3426,3 +3426,16 @@ button:hover::before {
 button:hover a {
   color: #111;
 }
+
+.community-img-container {
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+  height: 400px; /* Set a fixed height for the container */
+  margin-bottom: 20px; /* Add some space below the container */
+}
+
+.community-img {
+  max-height: 100%; /* Ensure the image fits within the container's height */
+  max-width: 100%; /* Ensure the image fits within the container's width */
+}
