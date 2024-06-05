@@ -134,7 +134,7 @@ input[type=tel]:focus {
 /* Ensure icons are properly aligned with text */
 .navbar .nav-link .fab {
   margin-right: 5px;
-  font-size: 22px; /* Larger icon size */
+  font-size: 40px; /* Larger icon size */
 }
 .nav-phone {
   font-size: 2em; /* Increase font size */
@@ -750,7 +750,7 @@ header .navbar-default .navbar-nav li a {
   transition: 0.3s;
 }
 .navigation .navbar .navbar-nav > li > a:hover, .navigation .navbar .navbar-nav > li > a:focus {
-  color: #c32f1b;
+  color: #000;
   background: transparent;
 }
 .navigation .navbar .navbar-nav li.active > a {
@@ -3355,7 +3355,8 @@ ul.dropdown-menu li {
     font-size: 28px;
 }
 
-button {
+/* General button styles */
+.button {
   padding: 0.8em 0.6em;
   border: 2px solid #0a4b97;
   position: relative;
@@ -3363,41 +3364,42 @@ button {
   background-color: transparent;
   text-transform: uppercase;
   font-size: 16px;
-  transition: .3s;
+  transition: 0.3s;
   z-index: 1;
   font-family: inherit;
   color: #0a4b97;
-  display: inline-flex; /* Changed to inline-flex to use flexbox properties */
-  justify-content: center; /* Center content horizontally */
-  align-items: center; /* Center content vertically */
-  width: auto; /* Set a specific width */
-  height: 3.4rem; /* Set a specific height */
-  cursor: pointer; /* Ensures it's clear the element is clickable */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 3.4rem;
+  cursor: pointer;
   border-radius: 10px;
+  text-align: center;
+  text-decoration: none; /* Ensure no underline */
 }
 
 .button a {
   color: #fff;
   text-decoration: none;
-  width: 100%; /* Ensure <a> covers the full width of the button */
-  height: 100%; /* Ensure <a> covers the full height of the button */
-  display: flex; /* Make the <a> a flex container */
-  justify-content: center; /* Center content horizontally */
-  align-items: center; /* Center content vertically */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.navbar-nav .button{
-  margin: 5px; /* Adds spacing between the buttons */
-  text-align: center; /* Ensures text within the buttons is centered */
+.navbar-nav .button {
+  margin: 5px;
+  text-align: center;
 }
 
-/* If your buttons are wrapping <a> elements, you might want to ensure these are also centered */
 .navbar-nav .button a {
-  display: block; /* Makes the <a> element fill the button */
-  text-align: center; /* Center the text */
+  display: block;
+  text-align: center;
 }
 
-button::before {
+.button::before {
   content: '';
   width: 0;
   height: 300%;
@@ -3406,24 +3408,24 @@ button::before {
   left: 50%;
   transform: translate(-50%, -50%) rotate(45deg);
   background: #0a4b97;
-  transition: .5s ease;
+  transition: width 0.5s ease, height 0.5s ease;
   display: block;
   z-index: -1;
 }
 
 @media (min-width: 768px) {
-  /* Enable animation for screens wider than 768px */
-  button::before {
-    width: 0;
-    height: 300%;
-    transition: .5s ease;
+  .button::before {
+      width: 0;
+      height: 300%;
+      transition: width 0.5s ease, height 0.5s ease;
   }
 }
-button:hover::before {
+
+.button:hover::before {
   width: 105%;
 }
 
-button:hover a {
+.button:hover {
   color: #111;
 }
 
