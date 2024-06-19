@@ -70,7 +70,7 @@ iframe {
 
 @media (max-width: 768px) {
   .map {
-    height: 170%;
+    height: 130%;
     width: 100%;
   }
 }
@@ -904,6 +904,7 @@ ul.dropdown-menu li {
     padding-top: 30px;
     padding-bottom: 30px;
   }
+
 }
 
 .slider .block {
@@ -1052,7 +1053,7 @@ ul.dropdown-menu li {
   }
   .about.section {
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 60px;
   }
 }
 
@@ -1258,8 +1259,9 @@ ul.dropdown-menu li {
   width: max-content; /* Ensures the width fits the content */
   margin: 20px auto; /* Centers the button and adds some space above and below */
   padding: 10px 20px; /* Padding inside the button */
-  border: 3px solid #1123c1; /* Blue border */
-  color: #1123c1; /* Blue text color to match the border */
+  border: 3px solid #0a4b97; /* Blue border */
+  color: #0a4b97; /* Blue text color to match the border */
+  background-color: white;
   text-align: center; /* Center the text inside the button */
   text-decoration: none; /* Removes underline from the link */
   border-radius: 25px; /* Rounded edges */
@@ -2205,8 +2207,9 @@ ul.dropdown-menu li {
   width: max-content; /* Ensures the width fits the content */
   margin: 20px auto; /* Centers the button and adds some space above and below */
   padding: 10px 20px; /* Padding inside the button */
-  border: 3px solid #1123c1; /* Blue border */
+  border: 4px solid #1123c1; /* Blue border */
   color: #1123c1; /* Blue text color to match the border */
+  background-color: white;
   text-align: center; /* Center the text inside the button */
   text-decoration: none; /* Removes underline from the link */
   border-radius: 25px; /* Rounded edges */
@@ -2216,6 +2219,7 @@ ul.dropdown-menu li {
 .about .email-button:hover {
   background-color: #1123c1; /* Solid blue background on hover */
   color: white; /* White text color on hover */
+  border: 4px solid white;
 }
 .alt-img {
   width: 100%;
