@@ -692,7 +692,7 @@ header .navbar-default .navbar-nav li a {
 
 .navigation {
   position: fixed;
-  background: #04531e;
+  background: grey;
   padding: 20px 0;
   top: 0;
   width: 100%;
@@ -874,11 +874,11 @@ ul.dropdown-menu li {
   }
 }
 .slider {
-  background: url("../images/homes2.jpg") no-repeat;
+  background: url("../images/colleseum.jpg") no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-position: center 0vh;
-  background-size: auto 100%;
+  background-size: auto 70%;
   padding: 20vh 0vh;
   position: relative;
 }
@@ -894,7 +894,7 @@ ul.dropdown-menu li {
 /* Further changes for viewports up to 768px wide */
 @media (max-width: 768px) {
   .slider {
-    background: url("../images/homes.jpg") no-repeat;
+    background: url("../images/colleseum.jpg") no-repeat;
     padding: 7.5vh 0;
     background-attachment: scroll;
     background-size: auto 80%;
