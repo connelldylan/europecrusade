@@ -901,8 +901,8 @@ ul.dropdown-menu li {
     background-position: 15% 150%;
   }
   .about.section {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 
 }
@@ -976,8 +976,8 @@ ul.dropdown-menu li {
     background-position: 50% 500%;
   }
   .about.section {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 }
 
@@ -1053,7 +1053,7 @@ ul.dropdown-menu li {
   }
   .about.section {
     padding-top: 30px;
-    padding-bottom: 60px;
+    padding-bottom: 20px;
   }
 }
 
