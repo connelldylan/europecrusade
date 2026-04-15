@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Europe Crusade | Trip Stats & Fun</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Trip stats, fun rankings, and tracked favorites from our Europe trip.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="author" content="DLC European Expansion">
+  <link rel="shortcut icon" type="image/x-icon" href="images/logo-circle.png" />
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="plugins/Ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="plugins/animate-css/animate.css">
+  <link rel="stylesheet" href="plugins/magnific-popup/magnific-popup.css">
+  <link rel="stylesheet" href="plugins/slick/slick.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+<body id="body" class="page-stats">
+
+<header class="navigation">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <nav class="navbar navbar-expand-lg p-0">
+          <a class="navbar-brand" href="index.html">
+            <img src="images/logo-circle.png" alt="Logo" style="height:45px; width:45px; margin-right: 8px;">
+            <span class="brand-title">DLC European Expansion</span>
+          </a>
+
+          <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-box">
+              <span class="navbar-toggler-line"></span>
+              <span class="navbar-toggler-line"></span>
+              <span class="navbar-toggler-line"></span>
+            </span>
+          </button>
+
+          <div class="collapse navbar-collapse ml-auto" id="navbarsExample09">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item"><a class="button" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="button" href="countries.html">Countries Visited</a></li>
+              <li class="nav-item"><a class="button" href="stats.html">Trip Stats &amp; Fun</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="stats-hero reveal">
+  <div class="container">
+    <div class="section-panel">
+      <div class="section-copy">
+        <p class="eyebrow">Trip Stats &amp; Fun</p>
+        <h1 style="font-size: clamp(2.3rem, 4.2vw, 4.1rem); margin-bottom: 10px; font-weight: 800; letter-spacing: -.04em;">The stuff we tracked because it made the trip better</h1>
+        <p class="lead">This page is built for all the fun categories: McDonald’s rankings, kebab counters, favorite cities, favorite stories, and anywhere we’d actually go back to.</p>
+      </div>
+
+      <div class="stats-mini-grid">
+        <article class="stats-mini-card">
+          <span>McDonald’s Tracker</span>
+          <strong>11 Countries</strong>
+          <p>Hover the map to compare the average rating with each person’s score.</p>
+        </article>
+        <article class="stats-mini-card">
+          <span>Kebab Counter</span>
+          <strong>Add total</strong>
+          <p>Swap this placeholder for your real trip count.</p>
+        </article>
+        <article class="stats-mini-card">
+          <span>Favorite Country/City</span>
+          <strong>Per person</strong>
+          <p>Use this page for the deeper rankings while the home page keeps the top picks.</p>
+        </article>
+        <article class="stats-mini-card">
+          <span>Go Back To</span>
+          <strong>Add shortlist</strong>
+          <p>Perfect spot for the cities that were worth a second trip.</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reveal">
+  <div class="container">
+    <div class="stats-layout">
+      <article class="mcd-map-card">
+        <div class="section-copy">
+          <p class="eyebrow">McDonald’s Tracker</p>
+          <h2 class="section-subtitle dark-text">Europe map with average rating + individual scores</h2>
+          <p class="section-text">The map shows the average score first. Hover or tap the pins to see Charlie, Larken, and Dylan’s ratings for that country’s McDonald’s on a 1–5 scale.</p>
+        </div>
+
+        <div class="mcd-map-shell">
+          <div class="mcd-map-base" id="mcdMap">
+            <button class="map-country-pin" style="left:24%;top:25%;" data-country="Ireland" data-avg="4.3"></button>
+            <button class="map-country-pin" style="left:29%;top:24%;" data-country="United Kingdom" data-avg="4.0"></button>
+            <button class="map-country-pin" style="left:38%;top:31%;" data-country="France" data-avg="4.4"></button>
+            <button class="map-country-pin" style="left:35%;top:46%;" data-country="Spain" data-avg="4.7"></button>
+            <button class="map-country-pin" style="left:47%;top:42%;" data-country="Italy" data-avg="4.2"></button>
+            <button class="map-country-pin" style="left:49%;top:32%;" data-country="Austria" data-avg="3.9"></button>
+            <button class="map-country-pin" style="left:54%;top:30%;" data-country="Czechia" data-avg="4.1"></button>
+            <button class="map-country-pin" style="left:50%;top:23%;" data-country="Germany" data-avg="4.0"></button>
+            <button class="map-country-pin" style="left:49%;top:16%;" data-country="Denmark" data-avg="3.8"></button>
+            <button class="map-country-pin" style="left:41%;top:21%;" data-country="Belgium" data-avg="4.1"></button>
+            <button class="map-country-pin" style="left:42%;top:18%;" data-country="Netherlands" data-avg="4.5"></button>
+          </div>
+
+          <div class="map-country-tooltip" id="countryTooltip">
+            <h3>Ireland</h3>
+            <p>Average rating: <strong>4.3 / 5</strong></p>
+            <div class="tooltip-ratings">
+              <div><strong>Charlie</strong><span>4.5 / 5</span></div>
+              <div><strong>Larken</strong><span>4.0 / 5</span></div>
+              <div><strong>Dylan</strong><span>4.5 / 5</span></div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="rankings-card">
+        <div class="section-copy">
+          <p class="eyebrow">Three ranking lines</p>
+          <h2 class="section-subtitle dark-text">Individual McDonald’s rankings</h2>
+          <p class="section-text">These are built as editable rankings so you can swap the countries and scores for the final version fast.</p>
+        </div>
+
+        <div class="rankings-grid">
+          <section class="ranking-column">
+            <h3>Charlie</h3>
+            <div class="ranking-list">
+              <div class="ranking-item"><span class="rank-number">1</span><span class="rank-country">Spain</span><span class="rank-score">4.9 / 5</span></div>
+              <div class="ranking-item"><span class="rank-number">2</span><span class="rank-country">Netherlands</span><span class="rank-score">4.7 / 5</span></div>
+              <div class="ranking-item"><span class="rank-number">3</span><span class="rank-country">France</span><span class="rank-score">4.5 / 5</span></div>
+            </div>
+          </section>
+
+          <section class="ranking-column">
+            <h3>Larken</h3>
+            <div class="ranking-list">
+              <div class="ranking-item"><span class="rank-number">1</span><span class="rank-country">Spain</span><span class="rank-score">4.8 / 5</span></div>
+              <div class="ranking-item"><span class="rank-number">2</span><span class="rank-country">Italy</span><span class="rank-score">4.4 / 5</span></div>
+              <div class="ranking-item"><span class="rank-number">3</span><span class="rank-country">Belgium</span><span class="rank-score">4.2 / 5</span></div>
+            </div>
+          </section>
+
+          <section class="ranking-column">
+            <h3>Dylan</h3>
+            <div class="ranking-list">
+              <div class="ranking-item"><span class="rank-number">1</span><span class="rank-country">Netherlands</span><span class="rank-score">4.9 / 5</span></div>
+              <div class="ranking-item"><span class="rank-number">2</span><span class="rank-country">Spain</span><span class="rank-score">4.7 / 5</span></div>
+              <div class="ranking-item"><span class="rank-number">3</span><span class="rank-country">France</span><span class="rank-score">4.4 / 5</span></div>
+            </div>
+          </section>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<footer class="footer journal-footer">
+  <div class="container">
+    <p class="copyright mb-0">
+      Copyright 2025 &copy; DLC European Expansion. All rights reserved.
+      <br>Contact: dconnell3599@gmail.com
+    </p>
+  </div>
+</footer>
+
+<div id="scroll-to-top" class="scroll-to-top">
+  <span class="icon ion-ios-arrow-up"></span>
+</div>
+
+<script src="plugins/jquery/jquery.min.js"></script>
+<script src="plugins/bootstrap/bootstrap.min.js"></script>
+<script src="plugins/slick/slick.min.js"></script>
+<script src="plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+<script src="plugins/shuffle/shuffle.min.js"></script>
+<script src="plugins/SyoTimer/jquery.syotimer.min.js"></script>
+<script src="js/script.js"></script>
+<script>
+  const ratingsData = {
+    "Ireland": { avg: 4.3, Charlie: 4.5, Larken: 4.0, Dylan: 4.5 },
+    "United Kingdom": { avg: 4.0, Charlie: 4.1, Larken: 3.8, Dylan: 4.1 },
+    "France": { avg: 4.4, Charlie: 4.5, Larken: 4.2, Dylan: 4.4 },
+    "Spain": { avg: 4.7, Charlie: 4.9, Larken: 4.8, Dylan: 4.7 },
+    "Italy": { avg: 4.2, Charlie: 4.0, Larken: 4.4, Dylan: 4.2 },
+    "Austria": { avg: 3.9, Charlie: 4.0, Larken: 3.7, Dylan: 4.0 },
+    "Czechia": { avg: 4.1, Charlie: 4.0, Larken: 4.1, Dylan: 4.2 },
+    "Germany": { avg: 4.0, Charlie: 4.0, Larken: 3.9, Dylan: 4.1 },
+    "Denmark": { avg: 3.8, Charlie: 3.7, Larken: 3.8, Dylan: 3.9 },
+    "Belgium": { avg: 4.1, Charlie: 4.0, Larken: 4.2, Dylan: 4.1 },
+    "Netherlands": { avg: 4.5, Charlie: 4.7, Larken: 4.0, Dylan: 4.9 }
+  };
+
+  const tooltip = document.getElementById('countryTooltip');
+  const pins = document.querySelectorAll('.map-country-pin');
+
+  function renderTooltip(country) {
+    const data = ratingsData[country];
+    if (!data) return;
+    tooltip.innerHTML = `
+      <h3>${country}</h3>
+      <p>Average rating: <strong>${data.avg.toFixed(1)} / 5</strong></p>
+      <div class="tooltip-ratings">
+        <div><strong>Charlie</strong><span>${data.Charlie.toFixed(1)} / 5</span></div>
+        <div><strong>Larken</strong><span>${data.Larken.toFixed(1)} / 5</span></div>
+        <div><strong>Dylan</strong><span>${data.Dylan.toFixed(1)} / 5</span></div>
+      </div>
+    `;
+  }
+
+  pins.forEach((pin) => {
+    pin.addEventListener('mouseenter', () => renderTooltip(pin.dataset.country));
+    pin.addEventListener('focus', () => renderTooltip(pin.dataset.country));
+    pin.addEventListener('click', () => renderTooltip(pin.dataset.country));
+  });
+
+  const revealItems = document.querySelectorAll('.reveal');
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.08,
+    rootMargin: '0px 0px -80px 0px'
+  });
+  revealItems.forEach((item) => revealObserver.observe(item));
+
+  const navToggler = document.querySelector('.navbar-toggler');
+  const navCollapse = document.getElementById('navbarsExample09');
+  if (navCollapse && navToggler) {
+    navCollapse.addEventListener('shown.bs.collapse', () => navToggler.classList.add('is-active'));
+    navCollapse.addEventListener('hidden.bs.collapse', () => navToggler.classList.remove('is-active'));
+  }
+</script>
+</body>
+</html>
