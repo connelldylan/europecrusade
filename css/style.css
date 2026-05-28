@@ -918,7 +918,7 @@ body.page-stats .footer.journal-footer { background: var(--footer-stats); }
 }
 
 .pick-card {
-  padding: 22px;
+  padding: 12px;
   border-radius: 22px;
   background: rgba(255,255,255,0.72);
   border: 1px solid rgba(10,75,151,0.09);
@@ -939,7 +939,7 @@ body.page-stats .footer.journal-footer { background: var(--footer-stats); }
 }
 
 .pick-card h3 {
-  font-size: 26px;
+  font-size: 23px;
   margin-bottom: 6px;
   font-weight: 800;
   letter-spacing: -.03em;
@@ -949,7 +949,7 @@ body.page-stats .footer.journal-footer { background: var(--footer-stats); }
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
-  margin: 14px 0 0;
+  margin: 16px 0 0;
 }
 
 .pick-meta span {
@@ -957,7 +957,7 @@ body.page-stats .footer.journal-footer { background: var(--footer-stats); }
   align-items: center;
   min-height: 34px;
   padding: 0 12px;
-  border-radius: 999px;
+  border-radius: 15px;
   background: rgba(255,255,255,0.85);
   border: 1px solid rgba(10,75,151,0.1);
   color: var(--ink);
@@ -993,6 +993,27 @@ body.page-stats .footer.journal-footer { background: var(--footer-stats); }
   max-height: 360px;
   object-fit: cover;
   border-radius: 18px;
+}
+
+.story-image-wrap-larken {
+  width: 100%;
+  height: 440px;
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+.story-image-wrap-larken img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 0%;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .story-image-wrap-larken {
+    height: 250px; /* change this value for mobile height */
+  }
 }
 
 .page-shell { padding-top: 28px; }
@@ -1116,96 +1137,131 @@ body.page-stats .footer.journal-footer { background: var(--footer-stats); }
 
 .mcd-map-shell {
   position: relative;
-  padding: 16px;
+  padding: 14px;
   border-radius: 22px;
-  background: linear-gradient(180deg, rgba(255,255,255,.78), rgba(255,255,255,.65));
-  min-height: 580px;
+  background: rgba(255,255,255,.78);
 }
 
 .mcd-map-base {
   position: relative;
   width: 100%;
-  height: 540px;
+  max-width: 560px;
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
   border-radius: 18px;
   overflow: hidden;
-  background:
-    radial-gradient(circle at 35% 30%, rgba(10,75,151,.16), transparent 18%),
-    radial-gradient(circle at 63% 68%, rgba(255,133,34,.18), transparent 16%),
-    linear-gradient(180deg, #dbeeff 0%, #cde7ff 50%, #e6f4ff 100%);
+  background: #dbeeff;
   border: 1px solid rgba(10,75,151,.08);
 }
 
-.mcd-map-base::before {
-  content: "";
+.europe-map-img {
   position: absolute;
-  inset: 24px;
-  background: url("images/trip_map.png") center/contain no-repeat;
-  opacity: .22;
-  filter: saturate(0.6);
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: .92;
+  filter: brightness(1.08) contrast(.96) saturate(.85);
 }
 
 .map-country-pin {
   position: absolute;
-  width: 22px;
-  height: 22px;
+  z-index: 4;
+  width: 17px;
+  height: 17px;
   border-radius: 999px;
   border: 3px solid #fff;
   background: linear-gradient(135deg, #ff8522, #f14668);
-  box-shadow: 0 10px 20px rgba(14, 48, 96, 0.18);
+  box-shadow: 0 8px 18px rgba(14, 48, 96, 0.22);
   cursor: pointer;
   transition: transform .18s ease;
 }
-.map-country-pin:hover { transform: scale(1.08); z-index: 5; }
+
+.map-country-pin:hover {
+  transform: scale(1.12);
+  z-index: 8;
+}
+
 .map-country-pin::after {
   content: attr(data-avg);
   position: absolute;
-  top: -34px;
+  top: -30px;
   left: 50%;
   transform: translateX(-50%);
-  min-width: 44px;
-  height: 26px;
-  padding: 0 8px;
+  min-width: 38px;
+  height: 22px;
+  padding: 0 7px;
   border-radius: 999px;
   background: rgba(7, 23, 49, .92);
   color: #fff;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 800;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
-  letter-spacing: .02em;
 }
 
 .map-country-tooltip {
   position: absolute;
-  left: 28px;
-  bottom: 28px;
-  width: min(320px, calc(100% - 56px));
-  min-height: 170px;
-  border-radius: 20px;
+  top: 16px;
+  right: 16px;
+  z-index: 10;
+  width: min(245px, calc(100% - 32px));
+  border-radius: 18px;
   background: rgba(7, 23, 49, 0.94);
   color: #fff;
-  padding: 18px;
-  box-shadow: 0 20px 38px rgba(4, 10, 21, 0.28);
+  padding: 14px;
+  box-shadow: 0 18px 34px rgba(4, 10, 21, 0.26);
 }
-.map-country-tooltip h3 { color: #fff; font-size: 24px; margin-bottom: 6px; }
-.map-country-tooltip p { color: rgba(255,255,255,.82); font-size: 14px; }
+
+.map-country-tooltip h3 {
+  color: #fff;
+  font-size: 21px;
+  margin-bottom: 4px;
+}
+
+.map-country-tooltip p {
+  color: rgba(255,255,255,.82);
+  font-size: 13px;
+}
+
+.pin-ireland { left: 12%; top: 46%; }
+.pin-uk { left: 22%; top: 50%; }
+.pin-france { left: 28%; top: 68%; }
+.pin-spain { left: 14%; top: 84%; }
+.pin-italy { left: 46%; top: 78%; }
+.pin-austria { left: 50%; top: 66%; }
+.pin-czechia { left: 51%; top: 58%; }
+.pin-germany { left: 42%; top: 57%; }
+.pin-belgium { left: 32%; top: 57%; }
+.pin-netherlands { left: 36%; top: 51%; }
+
 .tooltip-ratings {
-  margin-top: 14px;
+  margin-top: 12px;
   display: grid;
-  gap: 8px;
+  gap: 7px;
 }
+
 .tooltip-ratings div {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
-  padding: 10px 12px;
-  border-radius: 14px;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 12px;
   background: rgba(255,255,255,.08);
 }
-.tooltip-ratings strong { color: #fff; font-size: 14px; }
-.tooltip-ratings span { color: #ffdc7b; font-weight: 700; font-size: 14px; }
+
+.tooltip-ratings strong {
+  color: #fff;
+  font-size: 13px;
+}
+
+.tooltip-ratings span {
+  color: #ffdc7b;
+  font-weight: 700;
+  font-size: 13px;
+}
 
 .rankings-grid {
   display: grid;
@@ -1236,9 +1292,9 @@ body.page-stats .footer.journal-footer { background: var(--footer-stats); }
   background: rgba(255,255,255,.86);
 }
 .rank-number {
-  width: 34px;
-  height: 34px;
-  border-radius: 999px;
+  width: 40px;
+  height: 40px;
+  border-radius: 99px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1401,4 +1457,77 @@ body.page-stats .footer.journal-footer { background: var(--footer-stats); }
   .map-frame img {
     max-width: 96%;
   }
+}
+
+/* ===== Mobile-only McDonald's map refinements ===== */
+@media (max-width: 768px) {
+
+  .mcd-map-card {
+    padding: 14px;
+  }
+
+  .mcd-map-shell {
+    padding: 2px;
+    border-radius: 18px;
+  }
+
+  .mcd-map-base {
+    position: relative;
+    max-width: 100%;
+    height: 620px;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #dbeeff;
+  }
+
+  .europe-map-img {
+    position: absolute;
+    width: 100%;
+    height: 45%;
+    left: 35%;              /* move image right */
+    right: auto;
+    top: -30%;
+    object-fit: contain;
+    object-position: center top;
+    opacity: .92;
+    transform: scale(2.1); /* zoom */
+    transform-origin: center top;
+  }
+
+  .map-country-tooltip {
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    top: auto;
+    width: auto;
+    padding: 12px;
+    border-radius: 16px;
+    z-index: 20;
+  }
+
+  .map-country-tooltip h3 {
+    font-size: 20px;
+    margin-bottom: 4px;
+  }
+
+  .tooltip-ratings {
+    gap: 6px;
+  }
+
+  .tooltip-ratings div {
+    padding: 7px 10px;
+  }
+
+  /* MOBILE PINS ONLY */
+  .pin-ireland { left: 19%; top: 14%; }
+  .pin-uk { left: 37%; top: 18%; }
+  .pin-france { left: 46%; top: 35%; }
+  .pin-spain { left: 20%; top: 49%; }
+  .pin-italy { left: 76%; top: 42%; }
+  .pin-austria { left: 85%; top: 32%; }
+  .pin-czechia { left: 86%; top: 25%; }
+  .pin-germany { left: 70%; top: 24%; }
+  .pin-belgium { left: 55%; top: 24%; }
+  .pin-netherlands { left: 59%; top: 17%; }
 }

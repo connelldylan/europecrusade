@@ -93,31 +93,32 @@
           <h2 class="section-subtitle dark-text">Europe map with average rating + individual scores</h2>
           <p class="section-text">The map shows the average score first. Hover or tap the pins to see Charlie, Larken, and Dylan’s ratings for that country’s McDonald’s on a 1–5 scale.</p>
         </div>
-
+          
         <div class="mcd-map-shell">
-          <div class="mcd-map-base" id="mcdMap">
-            <button class="map-country-pin" style="left:24%;top:25%;" data-country="Ireland" data-avg="4.3"></button>
-            <button class="map-country-pin" style="left:29%;top:24%;" data-country="United Kingdom" data-avg="4.0"></button>
-            <button class="map-country-pin" style="left:38%;top:31%;" data-country="France" data-avg="4.4"></button>
-            <button class="map-country-pin" style="left:35%;top:46%;" data-country="Spain" data-avg="4.7"></button>
-            <button class="map-country-pin" style="left:47%;top:42%;" data-country="Italy" data-avg="4.2"></button>
-            <button class="map-country-pin" style="left:49%;top:32%;" data-country="Austria" data-avg="3.9"></button>
-            <button class="map-country-pin" style="left:54%;top:30%;" data-country="Czechia" data-avg="4.1"></button>
-            <button class="map-country-pin" style="left:50%;top:23%;" data-country="Germany" data-avg="4.0"></button>
-            <button class="map-country-pin" style="left:49%;top:16%;" data-country="Denmark" data-avg="3.8"></button>
-            <button class="map-country-pin" style="left:41%;top:21%;" data-country="Belgium" data-avg="4.1"></button>
-            <button class="map-country-pin" style="left:42%;top:18%;" data-country="Netherlands" data-avg="4.5"></button>
-          </div>
+        <div class="mcd-map-base" id="mcdMap">
+          <img src="images/europe-map.png" alt="Europe map" class="europe-map-img">
+
+          <button class="map-country-pin pin-ireland" data-country="Ireland" data-avg="3.66"></button>
+          <button class="map-country-pin pin-uk" data-country="United Kingdom" data-avg="3.66"></button>
+          <button class="map-country-pin pin-france" data-country="France" data-avg="1"></button>
+          <button class="map-country-pin pin-spain" data-country="Spain" data-avg="4"></button>
+          <button class="map-country-pin pin-italy" data-country="Italy" data-avg="4.33"></button>
+          <button class="map-country-pin pin-austria" data-country="Austria" data-avg="3.33"></button>
+          <button class="map-country-pin pin-czechia" data-country="Czechia" data-avg="2.66"></button>
+          <button class="map-country-pin pin-germany" data-country="Germany" data-avg="4.66"></button>
+          <button class="map-country-pin pin-belgium" data-country="Belgium" data-avg="2.33"></button>
+          <button class="map-country-pin pin-netherlands" data-country="Netherlands" data-avg="3"></button>
 
           <div class="map-country-tooltip" id="countryTooltip">
             <h3>Ireland</h3>
-            <p>Average rating: <strong>4.3 / 5</strong></p>
+            <p>Average rating: <strong>3.66 / 5</strong></p>
             <div class="tooltip-ratings">
-              <div><strong>Charlie</strong><span>4.5 / 5</span></div>
-              <div><strong>Larken</strong><span>4.0 / 5</span></div>
-              <div><strong>Dylan</strong><span>4.5 / 5</span></div>
+              <div><strong>Charlie</strong><span>4 / 5</span></div>
+              <div><strong>Larken</strong><span>3 / 5</span></div>
+              <div><strong>Dylan</strong><span>4 / 5</span></div>
             </div>
           </div>
+        </div>
         </div>
       </article>
 
@@ -125,34 +126,35 @@
         <div class="section-copy">
           <p class="eyebrow">Three ranking lines</p>
           <h2 class="section-subtitle dark-text">Individual McDonald’s rankings</h2>
-          <p class="section-text">These are built as editable rankings so you can swap the countries and scores for the final version fast.</p>
+          <p class="section-text">These represent our favorite country’s McDonald’s, our average-rated McDonald’s experience, and our least favorite McDonald’s.<br>
+          “FAVE” = favorite, “AVRG” = average, and “POOR” = least favorite.</p>
         </div>
 
         <div class="rankings-grid">
           <section class="ranking-column">
             <h3>Charlie</h3>
             <div class="ranking-list">
-              <div class="ranking-item"><span class="rank-number">1</span><span class="rank-country">Spain</span><span class="rank-score">4.9 / 5</span></div>
-              <div class="ranking-item"><span class="rank-number">2</span><span class="rank-country">Netherlands</span><span class="rank-score">4.7 / 5</span></div>
-              <div class="ranking-item"><span class="rank-number">3</span><span class="rank-country">France</span><span class="rank-score">4.5 / 5</span></div>
+              <div class="ranking-item"><span class="rank-number">FAVE</span><span class="rank-country">Germany</span><span class="rank-score">5 / 5</span></div>
+              <div class="ranking-item"><span class="rank-number">AVRG</span><span class="rank-country">Belgium</span><span class="rank-score">3 / 5</span></div>
+              <div class="ranking-item"><span class="rank-number">POOR</span><span class="rank-country">France</span><span class="rank-score">1 / 5</span></div>
             </div>
           </section>
 
           <section class="ranking-column">
             <h3>Larken</h3>
             <div class="ranking-list">
-              <div class="ranking-item"><span class="rank-number">1</span><span class="rank-country">Spain</span><span class="rank-score">4.8 / 5</span></div>
-              <div class="ranking-item"><span class="rank-number">2</span><span class="rank-country">Italy</span><span class="rank-score">4.4 / 5</span></div>
-              <div class="ranking-item"><span class="rank-number">3</span><span class="rank-country">Belgium</span><span class="rank-score">4.2 / 5</span></div>
+              <div class="ranking-item"><span class="rank-number">FAVE</span><span class="rank-country">Germany</span><span class="rank-score">5 / 5</span></div>
+              <div class="ranking-item"><span class="rank-number">AVRG</span><span class="rank-country">Austria</span><span class="rank-score">3 / 5</span></div>
+              <div class="ranking-item"><span class="rank-number">POOR</span><span class="rank-country">France</span><span class="rank-score">1 / 5</span></div>
             </div>
           </section>
 
           <section class="ranking-column">
             <h3>Dylan</h3>
             <div class="ranking-list">
-              <div class="ranking-item"><span class="rank-number">1</span><span class="rank-country">Netherlands</span><span class="rank-score">4.9 / 5</span></div>
-              <div class="ranking-item"><span class="rank-number">2</span><span class="rank-country">Spain</span><span class="rank-score">4.7 / 5</span></div>
-              <div class="ranking-item"><span class="rank-number">3</span><span class="rank-country">France</span><span class="rank-score">4.4 / 5</span></div>
+              <div class="ranking-item"><span class="rank-number">FAVE</span><span class="rank-country">Italy</span><span class="rank-score">5 / 5</span></div>
+              <div class="ranking-item"><span class="rank-number">AVRG</span><span class="rank-country">UK</span><span class="rank-score">3 / 5</span></div>
+              <div class="ranking-item"><span class="rank-number">POOR</span><span class="rank-country">France</span><span class="rank-score">1 / 5</span></div>
             </div>
           </section>
         </div>
@@ -165,7 +167,6 @@
   <div class="container">
     <p class="copyright mb-0">
       Copyright 2025 &copy; DLC European Expansion. All rights reserved.
-      <br>Contact: dconnell3599@gmail.com
     </p>
   </div>
 </footer>
@@ -183,17 +184,16 @@
 <script src="js/script.js"></script>
 <script>
   const ratingsData = {
-    "Ireland": { avg: 4.3, Charlie: 4.5, Larken: 4.0, Dylan: 4.5 },
-    "United Kingdom": { avg: 4.0, Charlie: 4.1, Larken: 3.8, Dylan: 4.1 },
-    "France": { avg: 4.4, Charlie: 4.5, Larken: 4.2, Dylan: 4.4 },
-    "Spain": { avg: 4.7, Charlie: 4.9, Larken: 4.8, Dylan: 4.7 },
-    "Italy": { avg: 4.2, Charlie: 4.0, Larken: 4.4, Dylan: 4.2 },
-    "Austria": { avg: 3.9, Charlie: 4.0, Larken: 3.7, Dylan: 4.0 },
-    "Czechia": { avg: 4.1, Charlie: 4.0, Larken: 4.1, Dylan: 4.2 },
-    "Germany": { avg: 4.0, Charlie: 4.0, Larken: 3.9, Dylan: 4.1 },
-    "Denmark": { avg: 3.8, Charlie: 3.7, Larken: 3.8, Dylan: 3.9 },
-    "Belgium": { avg: 4.1, Charlie: 4.0, Larken: 4.2, Dylan: 4.1 },
-    "Netherlands": { avg: 4.5, Charlie: 4.7, Larken: 4.0, Dylan: 4.9 }
+    "Ireland": { avg: 3.66, Charlie: 4, Larken: 3, Dylan: 4 },
+    "United Kingdom": { avg: 3.66, Charlie: 4, Larken: 4, Dylan: 3 },
+    "France": { avg: 1, Charlie: 1, Larken: 1, Dylan: 1 },
+    "Spain": { avg: 4, Charlie: 4, Larken: 4, Dylan: 4 },
+    "Italy": { avg: 4.33, Charlie: 4, Larken: 4, Dylan: 5 },
+    "Austria": { avg: 4, Charlie: 4, Larken: 3, Dylan: 3 },
+    "Czechia": { avg: 2.66, Charlie: 2, Larken: 3, Dylan: 3 },
+    "Germany": { avg: 4.66, Charlie: 5, Larken: 5, Dylan: 4 },
+    "Belgium": { avg: 2.33, Charlie: 3, Larken: 2, Dylan: 2 },
+    "Netherlands": { avg: 3, Charlie: 4, Larken: 2, Dylan: 3 }
   };
 
   const tooltip = document.getElementById('countryTooltip');
@@ -204,11 +204,11 @@
     if (!data) return;
     tooltip.innerHTML = `
       <h3>${country}</h3>
-      <p>Average rating: <strong>${data.avg.toFixed(1)} / 5</strong></p>
+      <p>Average rating: <strong>${data.avg.toFixed(2)} / 5</strong></p>
       <div class="tooltip-ratings">
-        <div><strong>Charlie</strong><span>${data.Charlie.toFixed(1)} / 5</span></div>
-        <div><strong>Larken</strong><span>${data.Larken.toFixed(1)} / 5</span></div>
-        <div><strong>Dylan</strong><span>${data.Dylan.toFixed(1)} / 5</span></div>
+        <div><strong>Charlie</strong><span>${data.Charlie.toFixed(0)} / 5</span></div>
+        <div><strong>Larken</strong><span>${data.Larken.toFixed(0)} / 5</span></div>
+        <div><strong>Dylan</strong><span>${data.Dylan.toFixed(0)} / 5</span></div>
       </div>
     `;
   }
