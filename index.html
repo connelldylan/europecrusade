@@ -57,7 +57,37 @@
       <p class="hero-subtitle">Three friends, 10 countries, and 27 cities later, we returned home with unforgettable memories, endless stories, and a route we'll never stop talking about.</p>
       <div class="hero-actions">
         <a class="button button-solid" href="countries.html">View Each Country's Gallery</a>
-        <a class="button button-ghost" href="#trip-route">See the Route</a>
+        <a class="button button-ghost" href="#cities-map">See the Route</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="highlights-section reveal">
+  <div class="container">
+    <div class="section-panel highlights-panel">
+      <div class="section-copy">
+        <p class="eyebrow">Moments</p>
+        <h2 class="section-subtitle">Highlights</h2>
+      </div>
+
+      <div class="simple-carousel">
+        <div class="simple-carousel-track">
+          <img src="images/highlights/France5.jpg" alt="France5.jpg" class="carousel-img first-img">
+          <img src="images/highlights/France22.JPEG" alt="France22.JPEG" class="carousel-img">
+          <img src="images/highlights/Ireland29.JPG" alt="Ireland29.JPG" class="carousel-img">
+          <img src="images/highlights/Germany7.jpg" alt="Germany7.jpg" class="carousel-img contain-img">
+          <img src="images/highlights/Italy6.JPG" alt="Italy6.JPG" class="carousel-img">
+          <img src="images/highlights/Italy1.JPG" alt="Italy1.JPG" class="carousel-img">
+          <img src="images/highlights/UK8.JPG" alt="UK8.JPG" class="carousel-img">
+          <img src="images/highlights/France2.jpg" alt="France2.jpg" class="carousel-img">
+          <img src="images/highlights/Spain37.jpg" alt="Spain37.jpg" class="carousel-img focus-faces">
+          <img src="images/highlights/France16.jpg" alt="France16.jpg" class="carousel-img">
+          <img src="images/highlights/France8.JPG" alt="France8.JPG" class="carousel-img">
+          <img src="images/highlights/France10.JPG" alt="France10.JPG" class="carousel-img">
+        </div>
+        <button class="carousel-btn prev" onclick="moveSlide(-1)" aria-label="Previous slide"><i class="ion-ios-arrow-back"></i></button>
+        <button class="carousel-btn next" onclick="moveSlide(1)" aria-label="Next slide"><i class="ion-ios-arrow-forward"></i></button>
       </div>
     </div>
   </div>
@@ -108,45 +138,7 @@
   </div>
 </section>
 
-<section class="favorite-picks-section reveal">
-  <div class="container">
-    <div class="section-panel">
-      <div class="section-copy">
-        <p class="eyebrow">Favorite Picks</p>
-        <h2 class="section-subtitle dark-text">The Favorites We’d Put at the Top</h2>
-        <p class="section-text">Each of our favorite countries and cities we loved most and why.</p>
-      </div>
-      <div class="favorite-picks-grid">
-        <article class="pick-card">
-          <span class="pick-person">Charlie</span>
-          <h3>Favorite Country: Italy</h3>
-          <p>Italy, I would have to go with Italy as my favorite. Seeing the Coliseum, the Vatican, eating all the amazing food. Visiting lake Como, spending time in the Mountains. We really got a good taste of Italy and what it had to offer. </p>
-          <div class="pick-meta">
-            <span>Favorite City: Florence, Italy. The club scene in Florence was one of the best we visited. The food there was the 2nd to none. I made sure to try all their top rated sandwiches shops. I also found the history of Florence very fascinating. It’s definitely a place I would like to visit again. </span>
-          </div>
-        </article>
-        <article class="pick-card">
-          <span class="pick-person">Larken</span>
-          <h3>Favorite Country: Italy</h3>
-          <p>Italy, one place I always wanted to go to. It had everything from beaches, history, and mountains. Lake como and the alps were insanely cool. Driving into the mountains to hike was one of the highlights of my trip. </p>
-          <div class="pick-meta">
-            <span>Favorite City: Nice, France.  This is a tough one. I would have to say I had some of the most fun in Nice, France. We were insanely close to Monaco and there were some really cool beaches not that far away. The Airbnb suckeddd tho. Close second in Florence & Amsterdam. </span>
-          </div>
-        </article>
-        <article class="pick-card">
-          <span class="pick-person">Dylan</span>
-          <h3>Favorite Country: Germany</h3>
-          <p>It's a toss up between Germany and Spain. While Spain had excellent tourist spots and felt like living in paradise, my favorite country must go to Germany. The architecture and abundance of castles is breathtaking. Also, seeing the Cologne Cathedral (Kölner Dom) when we first got off the train was unbelievable.</p>
-          <div class="pick-meta">
-            <span>Favorite City: Tarragona, Spain. I ABSOLUTELY LOVE TARRAGONA AND WILL BE BACK! Everything was cheap, the buildings were super cool (and all were painted with bright colors), white sand beach, AND there is clearly some Roman influence there too, which was awesome to explore around.</span>
-          </div>
-        </article>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="map-section reveal trip-map">
+<section class="map-section reveal trip-map" id="cities-map">
   <div class="container">
     <div class="section-panel">
       <div class="section-copy">
@@ -197,28 +189,6 @@
         <li><span>26. Beauvais, France</span><small>07/07/2025 - 07/08/2025</small></li>
         <li><span>27. Dublin, Ireland</span><small>07/08/2025 - 07/10/2025</small></li>
       </ol>
-    </div>
-  </div>
-</section>
-
-<section class="highlights-section reveal">
-  <div class="container">
-    <div class="section-panel highlights-panel">
-      <div class="section-copy">
-        <p class="eyebrow">Moments</p>
-        <h2 class="section-subtitle">Highlights</h2>
-      </div>
-
-      <div class="simple-carousel">
-        <div class="simple-carousel-track">
-          <img src="Ireland/Ireland18.jpg" alt="Europe trip highlight 1" class="carousel-img first-img">
-          <img src="Ireland/Ireland17.jpg" alt="Europe trip highlight 2" class="carousel-img">
-          <img src="Ireland/Ireland24.jpg" alt="Europe trip highlight 3" class="carousel-img">
-          <img src="Ireland/Ireland5.jpg" alt="Europe trip highlight 4" class="carousel-img">
-        </div>
-        <button class="carousel-btn prev" onclick="moveSlide(-1)" aria-label="Previous slide">&#10094;</button>
-        <button class="carousel-btn next" onclick="moveSlide(1)" aria-label="Next slide">&#10095;</button>
-      </div>
     </div>
   </div>
 </section>
