@@ -274,8 +274,10 @@
   const navToggler = document.querySelector('.navbar-toggler');
   const navCollapse = document.getElementById('navbarsExample09');
   if (navCollapse && navToggler) {
-    navCollapse.addEventListener('shown.bs.collapse', () => navToggler.classList.add('is-active'));
-    navCollapse.addEventListener('hidden.bs.collapse', () => navToggler.classList.remove('is-active'));
+    // Bootstrap fires these as jQuery-namespaced events, not native DOM events,
+    // so they have to be bound through jQuery to fire at all.
+    $(navCollapse).on('shown.bs.collapse', () => navToggler.classList.add('is-active'));
+    $(navCollapse).on('hidden.bs.collapse', () => navToggler.classList.remove('is-active'));
   }
 </script>
 </body>

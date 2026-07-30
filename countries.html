@@ -84,7 +84,8 @@
         </p>
 </div>
 </section><section class="country-filters reveal">
-<div aria-label="Filter countries" class="country-filter-bar">
+<div class="country-filter-scroll">
+<div aria-label="Filter countries" class="country-filter-bar" id="countryFilterBar">
 <button class="country-filter-btn" data-filter="all" type="button">All Countries</button>
 <button class="country-filter-btn active" data-filter="ireland" type="button">Ireland</button>
 <button class="country-filter-btn" data-filter="uk" type="button">UK</button>
@@ -97,6 +98,8 @@
 <button class="country-filter-btn" data-filter="denmark" type="button">Denmark</button>
 <button class="country-filter-btn" data-filter="netherlands" type="button">Netherlands</button>
 <button class="country-filter-btn" data-filter="belgium" type="button">Belgium</button>
+</div>
+<span aria-hidden="true" class="filter-scroll-hint" id="filterScrollHint"><i class="ion-ios-arrow-right"></i></span>
 </div>
 <section class="country-card accent-ireland reveal" data-country="ireland">
 <div>
@@ -1009,13 +1012,28 @@
   const navToggler = document.querySelector('.navbar-toggler');
   const navCollapse = document.getElementById('navbarsExample09');
   if (navCollapse && navToggler) {
-    navCollapse.addEventListener('shown.bs.collapse', () => navToggler.classList.add('is-active'));
-    navCollapse.addEventListener('hidden.bs.collapse', () => navToggler.classList.remove('is-active'));
+    // Bootstrap fires these as jQuery-namespaced events, not native DOM events,
+    // so they have to be bound through jQuery to fire at all.
+    $(navCollapse).on('shown.bs.collapse', () => navToggler.classList.add('is-active'));
+    $(navCollapse).on('hidden.bs.collapse', () => navToggler.classList.remove('is-active'));
   }
 
   const filterButtons = document.querySelectorAll('.country-filter-btn');
   const countryCards = document.querySelectorAll('.country-card[data-country]');
   const IMAGES_AHEAD = 2; // how many upcoming slides stay preloaded past the current one
+
+  // Hide the "swipe for more" hint once there's nothing left to scroll to.
+  const filterBar = document.getElementById('countryFilterBar');
+  const filterScrollHint = document.getElementById('filterScrollHint');
+  if (filterBar && filterScrollHint) {
+    const updateFilterScrollHint = () => {
+      const atEnd = filterBar.scrollLeft + filterBar.clientWidth >= filterBar.scrollWidth - 4;
+      filterScrollHint.classList.toggle('is-hidden', atEnd);
+    };
+    filterBar.addEventListener('scroll', updateFilterScrollHint, { passive: true });
+    window.addEventListener('resize', updateFilterScrollHint);
+    updateFilterScrollHint();
+  }
 
   function loadImage(img) {
     if (img && img.dataset.src) {

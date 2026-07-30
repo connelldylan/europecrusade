@@ -771,6 +771,18 @@ ol, ul {
     padding: 20px;
   }
 
+  .country-card {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .country-card .country-kicker,
+  .country-card h2,
+  .country-card .country-description {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
   .hero-actions {
     flex-direction: column;
     align-items: stretch;
@@ -1012,11 +1024,19 @@ body.page-stats .footer.journal-footer { background: var(--footer-stats); }
 
 .page-shell { padding-top: 18px; }
 
+.country-filter-scroll {
+  position: relative;
+}
+
 .country-filter-bar {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
   margin: 22px 0 30px;
+}
+
+.filter-scroll-hint {
+  display: none;
 }
 .country-filter-btn {
   display: inline-flex;
@@ -1403,9 +1423,45 @@ body.page-stats .footer.journal-footer { background: var(--footer-stats); }
     overflow-x: auto;
     flex-wrap: nowrap;
     padding-bottom: 4px;
+    scroll-snap-type: x proximity;
+    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 20px, #000 calc(100% - 36px), transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0, #000 20px, #000 calc(100% - 36px), transparent 100%);
   }
   .country-filter-btn {
     flex: 0 0 auto;
+    scroll-snap-align: start;
+    min-height: 46px;
+    padding: 0 18px;
+    font-size: 13.5px;
+    box-shadow: 0 10px 24px rgba(15, 46, 85, 0.18);
+  }
+  .country-filter-btn.active {
+    box-shadow: 0 12px 26px rgba(10, 75, 151, 0.32);
+  }
+
+  .filter-scroll-hint {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 34px;
+    height: 46px;
+    color: #fff;
+    font-size: 20px;
+    text-shadow: 0 2px 8px rgba(7, 22, 47, 0.45);
+    pointer-events: none;
+    animation: filterScrollHintNudge 1.4s ease-in-out infinite;
+  }
+
+  .filter-scroll-hint.is-hidden {
+    opacity: 0;
+  }
+
+  @keyframes filterScrollHintNudge {
+    0%, 100% { transform: translateX(0); opacity: .55; }
+    50% { transform: translateX(4px); opacity: 1; }
   }
 
   .simple-carousel .carousel-img {
