@@ -803,12 +803,19 @@ ol, ul {
   }
 
   .listing-gallery .carousel-item {
-    padding: 12px;
+    padding: 6px 6px 12px;
   }
 
-  .listing-gallery .carousel-item img,
   .carousel-img {
     height: 260px;
+  }
+
+  .country-card .listing-gallery .carousel-item img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 4;
+    max-height: 640px;
+    object-fit: contain;
   }
 
   .carousel-btn {
@@ -1405,7 +1412,7 @@ body.page-stats .footer.journal-footer { background: var(--footer-stats); }
   }
 
   .country-card .carousel-item {
-    padding: 8px 8px 14px;
+    padding: 6px 6px 12px;
   }
 
   .country-card .carousel-inner img {
