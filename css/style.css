@@ -1116,6 +1116,7 @@ body.page-stats .footer.journal-footer { background: var(--footer-stats); }
   display: grid;
   grid-template-columns: 1.25fr .95fr;
   gap: 24px;
+  margin-bottom: 40px;
 }
 
 .mcd-map-card,
